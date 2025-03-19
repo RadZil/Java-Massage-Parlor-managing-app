@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="860.0" styleClass="clients_container" stylesheets="@../Styles/authors.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javamassagaapp.Controllers.IncomeController">
+    <children>
+        <Text layoutX="409.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PAJAMOS" />
+        <TableView fx:id="income_table" layoutX="29.0" layoutY="234.0" prefHeight="200.0" prefWidth="806.0">
+            <columns>
+                <TableColumn fx:id="col_name" prefWidth="75.0" text="Vardas" />
+                <TableColumn fx:id="col_lastName" prefWidth="75.0" text="Pavarde" />
+                <TableColumn fx:id="col_date" prefWidth="75.0" text="Data" />
+                <TableColumn fx:id="col_price" prefWidth="75.0" text="Suma" />
+            </columns>
+            <contextMenu>
+                <ContextMenu>
+                    <items>
+                        <MenuItem fx:id="remove_visit" mnemonicParsing="false" text="Šalinti" />
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </TableView>
+      <Text fx:id="text_suma" layoutX="29.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUMA:" wrappingWidth="150.0" />
+      <DatePicker fx:id="datePicker_from" layoutX="22.0" layoutY="202.0" />
+      <DatePicker fx:id="datePicker_to" layoutX="228.0" layoutY="202.0" />
+      <Text  layoutX="22.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nuo:" wrappingWidth="174.0" />
+      <Text  layoutX="228.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Iki:" wrappingWidth="174.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="860.0" styleClass="clients_container" stylesheets="@../Styles/authors.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javamassagaapp.Controllers.VisitController">
+    <children>
+        <Text layoutX="409.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vizitai" />
+        <Button fx:id="add_visit_btn" layoutX="400.0" layoutY="97.0" mnemonicParsing="false" text="Prideti vizitą" />
+        <TableView fx:id="visit_table" layoutX="29.0" layoutY="234.0" prefHeight="200.0" prefWidth="806.0">
+            <columns>
+                <TableColumn fx:id="col_Id" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="col_firstName" prefWidth="75.0" text="Vardas" />
+                <TableColumn fx:id="col_lastName" prefWidth="75.0" text="Pavardė" />
+                <TableColumn fx:id="col_data" prefWidth="75.0" text="Data" />
+                <TableColumn fx:id="col_time" prefWidth="75.0" text="Laikas" />
+            <TableColumn fx:id="col_status" prefWidth="75.0" text="Sumoketa" />
+            <TableColumn fx:id="col_price" prefWidth="75.0" text="Kaina" />
+            </columns>
+            <contextMenu>
+                <ContextMenu>
+                    <items>
+                        <MenuItem fx:id="remove_visit" mnemonicParsing="false" text="Šalinti" />
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </TableView>
+        <TextField fx:id="filterFirstName" layoutX="29.0" layoutY="180.0" promptText="Vardas" />
+        <TextField fx:id="filterLastname" layoutX="207.0" layoutY="180.0" promptText="Pavardė" />
+        <TextField fx:id="filterDate" layoutX="386.0" layoutY="180.0" promptText="Data" />
+        <Button fx:id="filterButton" layoutX="555.0" layoutY="180.0" mnemonicParsing="false" text="Filtruoti" />
+      <Button  fx:id="update_button" layoutX="495.0" layoutY="97.0" mnemonicParsing="false" text="Atnaujinti" />
+    </children>
+</AnchorPane>
